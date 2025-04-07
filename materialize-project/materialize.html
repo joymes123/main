@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Sweet Tea Bakery</title>
+    <title>Sweet Bliss</title>
 
     <!-- Materialize CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
@@ -29,8 +29,26 @@
 
     <!-- Page Content -->
     <div class="container">
-        <h3 class="brown-text text-darken-3 center-align">Welcome to Sweet Bliss Bakery</h3>
+        <h3 class="brown-text text-darken-3 center-align">Welcome to Sweet Bites Bakery</h3>
         <p class="center-align">Serving smiles, cupcakes, and cozy vibes every day!</p>
+
+        <!-- Carousel Component -->
+        <div class="carousel carousel-slider center">
+            <div class="carousel-item">
+                <img src="images/banner_catering.jpg" alt="Image 1">
+            </div>
+            <div class="carousel-item">
+                <img src="images/cooliocakes.jpg" alt="Image 2">
+            </div>
+            <div class="carousel-item">
+                <img src="images/truck.jpg" alt="Image 3">
+            </div>
+            <div class="carousel-item">
+                <img src="images/kiddo.jpg" alt="Image 4">
+            </div>
+        </div>
+
+        <p class="center-align">Explore our collection of delicious treats!</p>
 
         <!-- Row 1: Media Card -->
         <div class="card horizontal z-depth-2">
@@ -48,8 +66,7 @@
         <!-- Circular Image -->
         <div class="center-align section">
             <h5 class="pink-text text-darken-2">Our Head Baker</h5>
-            <img src="images/woman-baker-forming-bread-loaves-raw-dough-professional-kitchen-young-happy-smiling-uniform-bakery-273612273.webp"
-                alt="Baker" class="circle responsive-img" style="width: 300px; height: 300px; background-color: #ff6b6b;
+            <img src="images/women.jpg" alt="Baker" class="circle responsive-img" style="width: 300px; height: 300px; background-color: #ff6b6b;
              border-radius: 50%; margin: 50px auto;">
         </div>
 
@@ -57,9 +74,31 @@
         <div class="center-align section">
             <h5 class="pink-text text-darken-2">Behind the Scenes</h5>
             <div class="video-container">
-                <iframe width="779" height="438" src="https://www.youtube.com/embed/lCCuZ1DTaWo" title="[a day in my life] working as a baker in melb: baking croissants, danishes, salt bread 🥐🍞🥖🧈" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe width="779" height="438" src="https://www.youtube.com/embed/lCCuZ1DTaWo"
+                    title="[a day in my life] working as a baker in melb: baking croissants, danishes, salt bread 🥐🍞🥖🧈"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
         </div>
+
+        <!-- Collapsible Component -->
+        <ul class="collapsible">
+            <li>
+                <div class="collapsible-header"><i class="material-icons">filter_drama</i>Catering</div>
+                <div class="collapsible-body"><span>.</span> Anywhere in your neighbourhood</div>
+            </li>
+            <li>
+                <div class="collapsible-header"><i class="material-icons">place</i>Location</div>
+                <div class="collapsible-body"><span>USA, Canada, Asia, Free international Shipping!</span></div>
+            </li>
+            <li>
+                <div class="collapsible-header"><i class="material-icons">whatshot</i>Trending</div>
+                <div class="collapsible-body"><span>Cherry Chai Cupcakes, Cream Brulee', Pineapple Blitz, Ube
+                        Macaron.</span></div>
+            </li>
+        </ul>
+
         <!-- Row 2: Media Card -->
         <div class="card horizontal z-depth-2">
             <div class="card-image">
@@ -72,8 +111,28 @@
                 </div>
             </div>
         </div>
-
     </div>
 
     <!-- Materialize JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!-- Initialize Carousel and Collapsible -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Initialize Carousel
+            var carouselElems = document.querySelectorAll('.carousel');
+            var carouselOptions = {
+                fullWidth: true,
+                indicators: true
+            };
+            var carouselInstances = M.Carousel.init(carouselElems, carouselOptions);
+
+            // Initialize Collapsible
+            var collapsibleElems = document.querySelectorAll('.collapsible');
+            var collapsibleOptions = {}; 
+            var collapsibleInstances = M.Collapsible.init(collapsibleElems, collapsibleOptions);
+        });
+    </script>
+</body>
+
+</html>
