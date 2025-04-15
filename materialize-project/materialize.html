@@ -11,6 +11,9 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
+
+    <!-- jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 
 <body class="pink lighten-5">
@@ -23,6 +26,7 @@
                 <li><a class="brown-text text-darken-2" href="#">Home</a></li>
                 <li><a class="brown-text text-darken-2" href="#">Menu</a></li>
                 <li><a class="brown-text text-darken-2" href="#">Contact</a></li>
+                <li><a class="brown-text text-darken-2" href="gallery.html">Gallery</a></li>
             </ul>
         </div>
     </nav>
@@ -50,7 +54,7 @@
 
         <p class="center-align">Explore our collection of delicious treats!</p>
 
-        <!-- Row 1: Media Card -->
+        <!-- Media Card -->
         <div class="card horizontal z-depth-2">
             <div class="card-image">
                 <img src="images/cupcakes.jpg" alt="Cupcake">
@@ -66,8 +70,8 @@
         <!-- Circular Image -->
         <div class="center-align section">
             <h5 class="pink-text text-darken-2">Our Head Baker</h5>
-            <img src="images/women.jpg" alt="Baker" class="circle responsive-img" style="width: 300px; height: 300px; background-color: #ff6b6b;
-             border-radius: 50%; margin: 50px auto;">
+            <img src="images/women.jpg" alt="Baker" class="circle responsive-img"
+                style="width: 300px; height: 300px; background-color: #ff6b6b; border-radius: 50%; margin: 50px auto;">
         </div>
 
         <!-- Embedded Video -->
@@ -99,7 +103,7 @@
             </li>
         </ul>
 
-        <!-- Row 2: Media Card -->
+        <!-- Media Card -->
         <div class="card horizontal z-depth-2">
             <div class="card-image">
                 <img src="images/frosting.jpg" alt="Cookies">
@@ -129,8 +133,33 @@
 
             // Initialize Collapsible
             var collapsibleElems = document.querySelectorAll('.collapsible');
-            var collapsibleOptions = {}; 
+            var collapsibleOptions = {};
             var collapsibleInstances = M.Collapsible.init(collapsibleElems, collapsibleOptions);
+        });
+    </script>
+
+    <!-- jQuery for interactive features -->
+    <script>
+        $(document).ready(function () {
+            // Interaction 1: Alert on hover
+            $("#hoverWelcome").mouseenter(function () {
+                alert("Welcome to our Bakery!");
+            });
+
+            // Interaction 2: Hide paragraph on click
+            $(".disappear p").click(function () {
+                $(this).hide();
+            });
+
+            // Interaction 3: Toggle paragraphs with button
+            $("#toggleBtn").click(function () {
+                $(".toggle-section p").toggle();
+            });
+
+            // Interaction 4: Change color and animate
+            $("#animateBtn").click(function () {
+                $("#animatedText").css("color", "pink").slideUp(2000).slideDown(2000);
+            });
         });
     </script>
 </body>

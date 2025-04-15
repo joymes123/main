@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delicious Bakery - jQuery Interactives</title>
+
+    <!-- jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- jQuery Interactions -->
+    <script>
+        // Interaction 1: Alert on hover
+        $(document).ready(function () {
+            $("#hoverWelcome").mouseenter(function () {
+                alert("Welcome to our Bakery!");
+            });
+        });
+
+        // Interaction 2: Hide paragraph on click
+        $(document).ready(function () {
+            $(".disappear p").click(function () {
+                $(this).hide();
+            });
+        });
+
+        // Interaction 3: Toggle paragraphs with button
+        $(document).ready(function () {
+            $("#toggleBtn").click(function () {
+                $(".toggle-section p").toggle();
+            });
+        });
+
+        // Interaction 4: Change color and animate
+        $(document).ready(function () {
+            $("#animateBtn").click(function () {
+                $("#animatedText").css("color", "pink").slideUp(2000).slideDown(2000);
+            });
+        });
+    </script>
+
+    <style>
+        section {
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Welcome to Delicious Bakery</h1>
+        <div class="navbar">
+            <a href="materialize.html">Materialize</a>
+        </div>
+    </header>
+
+    <!-- Interaction Sections -->
+
+    <!-- Section 1: Alert on hover -->
+    <section style="background-color: #ccc3ee;">
+        <p id="hoverWelcome">Hover over this text to get a special Bakery welcome!</p>
+    </section>
+
+    <!-- Section 2: Hide paragraph on click -->
+    <section class="disappear" style="background-color: #f1a1e8;">
+        <p>If you click on me, I will disappear.</p>
+        <p>Click me away!</p>
+        <p>Click me too!</p>
+    </section>
+
+    <!-- Section 3: Toggle paragraphs -->
+    <section class="toggle-section" style="background-color: #d0f4de;">
+        <button id="toggleBtn">Toggle paragraph visibility</button>
+        <p>This is a paragraph with little content.</p>
+        <p>This is another small paragraph.</p>
+    </section>
+
+    <!-- Section 4: Color change and animation -->
+    <section style="background-color: #fcd5ce;">
+        <p id="animatedText">Enter to Win a Sweet Treat!</p>
+        <button id="animateBtn">Click me</button>
+    </section>
+</body>
+
+</html>
